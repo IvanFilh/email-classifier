@@ -99,7 +99,7 @@ label {
 
 input[type="file"] {
   margin-top: 0.5rem;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 5.3rem;
   background: var(--surface-dark);
   border-radius: 8px;
   border: 2px solid var(--primary);
