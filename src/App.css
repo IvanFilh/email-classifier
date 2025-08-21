@@ -106,3 +106,23 @@ input[type="file"]:hover {
   color: var(--secondary);
   box-shadow: 0 4px 16px rgba(6, 182, 212, 0.18);
 }
+
+textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border-dark);
+  font-size: 1.08rem;
+  resize: vertical;
+  background: var(--surface-dark);
+  color: var(--text-dark);
+  box-sizing: border-box;
+  transition: border 0.3s, box-shadow 0.3s;
+  font-family: "Roboto Mono", "Consolas", monospace;
+}
+
+textarea:focus {
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
