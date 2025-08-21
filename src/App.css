@@ -75,3 +75,13 @@ h1 {
   border: 1.5px solid var(--border-dark);
   animation: fadeIn 1.2s;
 }
+
+label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  color: var(--secondary);
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
