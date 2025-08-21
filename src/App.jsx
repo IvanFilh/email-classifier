@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>FlowMail - AutoU</h1>
+      <h1>Email Classifier - AutoU</h1>
       <div className="form-section">
         <label>
           <strong>Upload de arquivo (.txt ou .pdf):</strong>
