@@ -227,3 +227,9 @@ button:not(:disabled):active::after {
   margin: 0.7rem 0;
   color: var(--text-dark);
 }
+
+strong {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
