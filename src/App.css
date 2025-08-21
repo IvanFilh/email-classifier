@@ -221,3 +221,9 @@ button:not(:disabled):active::after {
   text-align: left;
   animation: fadeInUp 1.2s;
 }
+
+.result-section p {
+  font-size: 1.12rem;
+  margin: 0.7rem 0;
+  color: var(--text-dark);
+}
