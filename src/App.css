@@ -242,3 +242,17 @@ strong {
   background: var(--primary);
   border-radius: 8px;
 }
+
+@media (max-width: 700px) {
+  #root {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+  .form-section,
+  .result-section {
+    padding: 1rem;
+  }
+  textarea {
+    font-size: 0.98rem;
+  }
+}
