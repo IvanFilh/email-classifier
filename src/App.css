@@ -34,3 +34,12 @@ body {
   position: relative;
   overflow: hidden;
 }
+h1 {
+  color: var(--accent);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  text-shadow: 0 2px 12px rgba(245, 158, 66, 0.18);
+  animation: fadeInDown 1s;
+}
