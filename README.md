@@ -1,12 +1,37 @@
-# React + Vite
+# Email Classifier – AutoU Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Este projeto foi desenvolvido como parte de um **desafio técnico** para a AutoU.  
+A proposta é criar uma **aplicação web simples**, que utiliza **Inteligência Artificial** para automatizar a **leitura e classificação de emails** recebidos por uma empresa do setor financeiro.  
 
-Currently, two official plugins are available:
+Atualmente, a empresa lida com um **alto volume de emails diariamente**, e muitos deles não exigem ação imediata (como felicitações ou mensagens de agradecimento). O sistema tem como objetivo **classificar automaticamente** esses emails e **sugerir respostas automáticas**, liberando tempo da equipe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Objetivos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Classificar emails** em categorias predefinidas:  
+  - **Produtivo**: Requer ação (ex.: dúvidas, solicitações, atualizações de status).  
+  - **Improdutivo**: Não requer ação (ex.: felicitações, agradecimentos).  
+
+- **Sugerir respostas automáticas** adequadas de acordo com a categoria identificada.  
+
+---
+
+## Stack em Uso
+
+- **Frontend:** HTML, CSS, JavaScript - Reactjs
+- **Backend:** Python
+- **NLP & AI:** Hugging Face Transformers 
+- **Hospedagem:** AWS
+
+---
+
+## Funcionalidades
+
+✔️ Upload de arquivos **.txt** ou **.pdf** contendo emails  
+✔️ Inserção direta de texto via formulário  
+✔️ **Classificação automática** em **Produtivo** ou **Improdutivo**  
+✔️ Sugestão de **resposta automática** baseada na classificação  
+✔️ Interface web simples e intuitiva  
+
+---
