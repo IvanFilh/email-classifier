@@ -233,3 +233,12 @@ strong {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--surface-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}
