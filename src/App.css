@@ -126,3 +126,25 @@ textarea:focus {
   border: 1.5px solid var(--accent);
   box-shadow: 0 0 0 2px var(--accent);
 }
+
+.or-divider {
+  text-align: center;
+  margin: 1.2rem 0;
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  vertical-align: middle;
+  margin: 0 8px;
+  border-radius: 2px;
+}
