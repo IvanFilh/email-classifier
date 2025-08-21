@@ -21,3 +21,16 @@ body {
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;
 }
+
+#root {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: var(--surface-dark);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
