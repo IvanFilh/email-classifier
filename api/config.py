@@ -1,4 +1,6 @@
-import os
+# Modelos Hugging Face
+CLASSIFICATION_MODEL = "facebook/bart-large-mnli"  # zero-shot classification
+GENERATION_MODEL = "google/flan-t5-small"          # geração de resposta
 
-HUGGINGFACE_API_URL = "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english"
-HUGGINGFACE_API_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN", "SUA_CHAVE_HUGGINGFACE")
+# Labels usados na classificação
+LABELS = ["Produtivo", "Improdutivo"]
