@@ -4,6 +4,10 @@ from nlp_utils import classify_email, generate_response
 
 app = FastAPI(title="Email NLP API")
 
+@app.get("/")
+def read_root():
+    return {"message": "API rodando!"}
+
 class EmailRequest(BaseModel):
     content: str
 

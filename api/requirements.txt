@@ -3,5 +3,4 @@ fastapi
 uvicorn
 requests
 nltk
-torch
 pydantic
