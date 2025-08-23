@@ -8,12 +8,10 @@ function App() {
   const [suggestedReply, setSuggestedReply] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Simulação de processamento (substituir por chamada à API depois)
   const handleProcess = async () => {
     setLoading(true);
     let text = emailText;
 
-    // Se o usuário enviou arquivo, tente ler o texto (apenas .txt por enquanto)
     if (file) {
       if (file.type === "text/plain") {
         text = await file.text();
@@ -26,20 +24,26 @@ function App() {
       }
     }
 
-    if (
-      text.toLowerCase().includes("suporte") ||
-      text.toLowerCase().includes("atualização")
-    ) {
-      setCategory("Produtivo");
-      setSuggestedReply(
-        "Olá! Sua solicitação foi recebida e será processada em breve."
-      );
-    } else {
-      setCategory("Improdutivo");
-      setSuggestedReply(
-        "Obrigado pela mensagem! Não é necessária nenhuma ação no momento."
-      );
+    try {
+      const response = await fetch("http://127.0.0.1:8000/process_email/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ content: text }),
+      });
+      if (!response.ok) {
+        throw new Error("Erro ao chamar API");
+      }
+
+      const data = await response.json();
+      setCategory(data.categoria);
+      setSuggestedReply(data.resposta_sugerida);
+    } catch (err) {
+      console.error(err);
+      alert("Erro ao processar email. Verifique o backend.");
     }
+
     setLoading(false);
   };
 
