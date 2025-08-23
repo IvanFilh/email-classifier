@@ -25,12 +25,12 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/process_email", {
+      const response = await fetch("http://127.0.0.1:8000/process_email/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ text }),
+        body: JSON.stringify({ content: text }),
       });
       if (!response.ok) {
         throw new Error("Erro ao chamar API");
