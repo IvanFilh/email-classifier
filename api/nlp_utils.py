@@ -3,7 +3,7 @@ from config import CLASSIFICATION_MODEL, GENERATION_MODEL, LABELS
 
 # Carrega os pipelines de NLP (carregados uma vez só)
 classifier = pipeline("zero-shot-classification", model=CLASSIFICATION_MODEL)
-generator = pipeline("text2text-generation", model=GENERATION_MODEL)
+generator = pipeline("text-generation", model=GENERATION_MODEL)
 
 def classify_email(text: str) -> str:
     """Classifica um email como Produtivo ou Improdutivo."""
@@ -13,9 +13,15 @@ def classify_email(text: str) -> str:
 def generate_response(category: str, email_text: str) -> str:
     """Gera uma resposta automática baseada na categoria."""
     if category == "Produtivo":
-        prompt = f"O seguinte email foi classificado como produtivo:\n\n{email_text}\n\nEscreva uma resposta curta e profissional."
+        prompt = (
+            f"Você recebeu o seguinte email:\n\"{email_text}\"\n\n"
+            "Responda de forma profissional, clara e objetiva."
+        )
     else:
-        prompt = f"O seguinte email foi classificado como improdutivo:\n\n{email_text}\n\nEscreva uma resposta educada e breve recusando ou encerrando o assunto."
+        prompt = (
+            f"Você recebeu o seguinte email:\n\"{email_text}\"\n\n"
+            "Escreva uma resposta educada e curta, recusando ou encerrando o assunto."
+        )
     
-    response = generator(prompt, max_length=100, num_return_sequences=1)
+    response = generator(prompt, max_length=100, num_return_sequences=1) 
     return response[0]["generated_text"]
